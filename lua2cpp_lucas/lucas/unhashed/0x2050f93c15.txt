@@ -1,0 +1,8 @@
+#[acmd_script( agent = "lucas", script = "0x2050f93c15" , category = ACMD_UNHASHED , low_priority)]
+unsafe fn 0x2050f93c15 (fighter: &mut L2CAgentBase) {
+	let lua_state = fighter.lua_state_agent;
+	let boma = fighter.boma();
+	if is_excute(fighter) {
+		AttackModule::clear_all(fighter.module_accessor);
+	}
+}

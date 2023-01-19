@@ -1,0 +1,17 @@
+#[acmd_script( agent = "trail_hole", script = "0x0cb4d9f532" , category = ACMD_UNHASHED , low_priority)]
+unsafe fn 0x0cb4d9f532 (fighter: &mut L2CAgentBase) {
+	let lua_state = fighter.lua_state_agent;
+	let boma = fighter.boma();
+	for(6 Iterations){;
+	if is_excute(fighter) {
+		QUAKE(fighter, *CAMERA_QUAKE_KIND_M);
+	}
+	wait(lua_state, 3.0);
+}
+frame(lua_state, 30.0);
+if is_excute(fighter) {
+	AttackModule::clear_all(fighter.module_accessor);
+	WorkModule::off_flag(fighter.module_accessor, /*Flag*/ *WEAPON_TRAIL_HOLE_STATUS_WORK_FLAG_PULL);
+	WorkModule::on_flag(fighter.module_accessor, /*Flag*/ *WEAPON_TRAIL_HOLE_STATUS_WORK_FLAG_SEND_ATTACK_END);
+}
+}

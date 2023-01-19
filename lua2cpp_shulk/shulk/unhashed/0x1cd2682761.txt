@@ -1,0 +1,13 @@
+#[acmd_script( agent = "shulk", script = "0x1cd2682761" , category = ACMD_UNHASHED , low_priority)]
+unsafe fn 0x1cd2682761 (fighter: &mut L2CAgentBase) {
+	let lua_state = fighter.lua_state_agent;
+	let boma = fighter.boma();
+	if is_excute(fighter) {
+		PLAY_SEQUENCE(fighter, Hash40::new("seq_shulk_rnd_final_02"));
+		PLAY_SE(fighter, Hash40::new("se_shulk_final03"));
+	}
+	frame(lua_state, 40.0);
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("vc_shulk_finalb_01"));
+	}
+}

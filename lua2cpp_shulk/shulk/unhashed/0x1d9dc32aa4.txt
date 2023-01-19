@@ -1,0 +1,32 @@
+#[acmd_script( agent = "shulk", script = "0x1d9dc32aa4" , category = ACMD_UNHASHED , low_priority)]
+unsafe fn 0x1d9dc32aa4 (fighter: &mut L2CAgentBase) {
+	let lua_state = fighter.lua_state_agent;
+	let boma = fighter.boma();
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("se_shulk_final04"));
+	}
+	frame(lua_state, 20.0);
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("vc_shulk_finalb_02"));
+	}
+	frame(lua_state, 54.0);
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("se_shulk_final05"));
+	}
+	frame(lua_state, 126.0);
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("vc_shulk_finalb_03"));
+	}
+	frame(lua_state, 148.0);
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("vc_shulk_finalb_04"));
+	}
+	frame(lua_state, 163.0);
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("se_shulk_final06"));
+	}
+	frame(lua_state, 235.0);
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("vc_shulk_finallast"));
+	}
+}

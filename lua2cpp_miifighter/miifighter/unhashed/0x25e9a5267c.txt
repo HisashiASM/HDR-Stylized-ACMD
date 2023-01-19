@@ -1,0 +1,8 @@
+#[acmd_script( agent = "miifighter", script = "0x25e9a5267c" , category = ACMD_UNHASHED , low_priority)]
+unsafe fn 0x25e9a5267c (fighter: &mut L2CAgentBase) {
+	let lua_state = fighter.lua_state_agent;
+	let boma = fighter.boma();
+	if is_excute(fighter) {
+		EFFECT_FOLLOW(fighter, Hash40::new("miifighter_hyakuretsukick_flash"), Hash40::new("toer"), 0, -2, 0, 0, 0, 0, 0.5, true);
+	}
+}

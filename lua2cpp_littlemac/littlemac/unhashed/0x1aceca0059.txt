@@ -1,0 +1,9 @@
+#[acmd_script( agent = "littlemac", script = "0x1aceca0059" , category = ACMD_UNHASHED , low_priority)]
+unsafe fn 0x1aceca0059 (fighter: &mut L2CAgentBase) {
+	let lua_state = fighter.lua_state_agent;
+	let boma = fighter.boma();
+	if is_excute(fighter) {
+		PLAY_SE(fighter, Hash40::new("vc_littlemac_damage02"));
+		SET_PLAY_INHIVIT(fighter, Hash40::new("vc_littlemac_damage02"), 5);
+	}
+}

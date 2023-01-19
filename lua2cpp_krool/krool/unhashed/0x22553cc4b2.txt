@@ -1,0 +1,8 @@
+#[acmd_script( agent = "krool", script = "0x22553cc4b2" , category = ACMD_UNHASHED , low_priority)]
+unsafe fn 0x22553cc4b2 (fighter: &mut L2CAgentBase) {
+	let lua_state = fighter.lua_state_agent;
+	let boma = fighter.boma();
+	if is_excute(fighter) {
+		STOP_SE(fighter, Hash40::new("se_krool_special_h03"));
+	}
+}
